@@ -1,15 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import Button from "react-bootstrap/Button"
+import FlashcardList from "../components/FlashcardList";
 import './App.scss';
 
 function App() {
-
+  const [flashcards, setFlashcards] = useState(sampleCards)
   const alertFunc = () => {
     alert("Alert!");
   }
   
   return (
-    <h1>Hello World!</h1>
+    <FlashcardList flashcards={flashcards} />
   );
 }
 
